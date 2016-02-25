@@ -5,10 +5,9 @@ import (
 	"strings"
 )
 
-func Mul(str string) int64 {
+func Mul(str string, consecutiveNum int) int64 {
 	seq := strings.Split(str, "")
-	len := len(seq)
-	consecutiveNum := 13
+	len := len(seq)+1
 
 	maxProd := int64(0) // AARGH! Go!
 	for i := 0; i < len-consecutiveNum; i++ {

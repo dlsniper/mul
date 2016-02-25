@@ -8,6 +8,7 @@ import (
 	"github.com/dlsniper/mul/mul3"
 	"github.com/dlsniper/mul/mul4"
 	"github.com/dlsniper/mul/mul5"
+	"github.com/dlsniper/mul/mul6"
 )
 
 var (
@@ -19,7 +20,7 @@ var (
 func BenchmarkMul1(b *testing.B) {
 	var res float64
 	for i := 0; i < b.N; i++ {
-		res = mul1.Mul(str)
+		res = mul1.Mul(str, 13)
 	}
 	finalResFloat = res
 }
@@ -27,7 +28,7 @@ func BenchmarkMul1(b *testing.B) {
 func BenchmarkMul2(b *testing.B) {
 	var res int64
 	for i := 0; i < b.N; i++ {
-		res = mul2.Mul(str)
+		res = mul2.Mul(str, 13)
 	}
 	finalResInt = res
 }
@@ -35,7 +36,7 @@ func BenchmarkMul2(b *testing.B) {
 func BenchmarkMul3(b *testing.B) {
 	var res int64
 	for i := 0; i < b.N; i++ {
-		res = mul3.Mul(str)
+		res = mul3.Mul(str, 13)
 	}
 	finalResInt = res
 }
@@ -43,7 +44,7 @@ func BenchmarkMul3(b *testing.B) {
 func BenchmarkMul4(b *testing.B) {
 	var res int64
 	for i := 0; i < b.N; i++ {
-		res = mul4.Mul(str)
+		res = mul4.Mul(str, 13)
 	}
 	finalResInt = res
 }
@@ -51,7 +52,15 @@ func BenchmarkMul4(b *testing.B) {
 func BenchmarkMul5(b *testing.B) {
 	var res int64
 	for i := 0; i < b.N; i++ {
-		res = mul5.Mul(str)
+		res = mul5.Mul(str, 13)
+	}
+	finalResInt = res
+}
+
+func BenchmarkMul6(b *testing.B) {
+	var res int64
+	for i := 0; i < b.N; i++ {
+		res = mul6.Mul(str, 13)
 	}
 	finalResInt = res
 }

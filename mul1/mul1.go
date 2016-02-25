@@ -25,10 +25,9 @@ func prodSeq(seq []string, c chan float64) {
 	c <- prod
 }
 
-func Mul(str string) float64 {
+func Mul(str string, consecutiveNum int) float64 {
 	seq := strings.Split(str, "")
 	len := len(seq)
-	consecutiveNum := 13
 	c := make(chan float64, len/consecutiveNum)
 
 	for i := 0; i+consecutiveNum < len; i++ {

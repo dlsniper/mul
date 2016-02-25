@@ -1,3 +1,7 @@
+/*
+  Original code of [@mhatch](https://gophers.slack.com/team/mhatch).
+ */
+
 package mul1
 
 import (
